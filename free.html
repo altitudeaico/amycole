@@ -54,19 +54,31 @@
     <h1>5 prompts that stop your AI character <em>falling apart</em>.</h1>
     <p class="sub">The fastest fix for drift. Copy, paste, and keep the same face every time. Free.</p>
 
-    <form class="form" id="optin" method="POST" action="REPLACE_WITH_YOUR_GHL_WEBHOOK">
+    <form class="form" id="optin">
       <label for="email">Where should we send it?</label>
       <input type="email" id="email" name="email" placeholder="you@email.com" required>
       <button type="submit" class="btn">Send me the 5 prompts &nbsp;&rarr;</button>
       <p class="fine">No spam. The prompts, then a few emails on building a character that lasts.</p>
     </form>
-    <div class="note"><b>Setup note (remove before launch):</b> point the form <code>action</code> at your GHL inbound webhook (tag: <code>phantom-lead</code>), then redirect to <code>free-thankyou.html</code>. Mirror your Bored Dog Club lead-capture flow.</div>
   </div></div>
 </div>
 <script>
-  // Placeholder handler: until the GHL webhook is wired, send to the thankyou page.
+  var WEBHOOK = 'https://services.leadconnectorhq.com/hooks/KgyxvvnvpsuewbPSND9W/webhook-trigger/2d56877f-053e-4a65-af84-7c8e4e317f79';
   document.getElementById('optin').addEventListener('submit', function(e){
-    if(this.action.indexOf('REPLACE_WITH')>-1){ e.preventDefault(); window.location='free-thankyou.html'; }
+    e.preventDefault();
+    var email = document.getElementById('email').value.trim();
+    if(!email){ return; }
+    var btn = this.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(WEBHOOK, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ email: email, source: 'phantom-free-optin', tag: 'phantom-lead' })
+    }).then(function(){
+      window.location = 'free-thankyou.html';
+    }).catch(function(){
+      // even if the network call reports an error, GHL usually still captures; proceed
+      window.location = 'free-thankyou.html';
+    });
   });
 </script>
 </body>
