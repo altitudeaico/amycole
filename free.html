@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free: 5 Prompts That Stop Your AI Character Falling Apart</title>
+<style>
+  :root{--sand:#EBE1CB;--ivory:#F7F0DF;--ink:#2A2015;--oak:#96591F;--gold:#A9793C;--goldlt:#D2A45E;--espresso:#1A140D;--body:#4E4230;--border:#DECBA8;--muted:#8A7B63}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--body);background:var(--espresso);line-height:1.6;min-height:100vh}
+  h1,h2,h3,.serif{font-family:Georgia,serif;font-weight:600}
+  em{font-style:italic;color:var(--goldlt)}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,10,7,.92) 0%,rgba(12,10,7,.72) 46%,rgba(12,10,7,.30) 100%)}
+  .inner{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:48px 24px;width:100%}
+  .col{max-width:520px}
+  .brand{letter-spacing:.4em;text-transform:uppercase;font-size:11px;font-weight:700;color:#EAD6AC;margin-bottom:26px}
+  .kick{letter-spacing:.2em;text-transform:uppercase;font-size:12px;font-weight:700;color:#F0CE8A;margin-bottom:14px}
+  h1{font-size:clamp(32px,5.4vw,50px);line-height:1.06;color:#FBF6ED;letter-spacing:-.4px}
+  h1 em{color:#E7C07A}
+  p.sub{margin-top:20px;font-family:Georgia,serif;font-style:italic;font-size:19px;color:#EBDFC8;max-width:40ch}
+  .form{margin-top:32px;background:rgba(30,22,12,.5);border:1px solid rgba(222,203,168,.28);border-radius:16px;padding:26px;max-width:440px;backdrop-filter:blur(3px)}
+  .form label{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#D8C4A0;margin-bottom:8px;font-weight:700}
+  .form input{width:100%;padding:16px 16px;border-radius:10px;border:1px solid var(--border);background:#FBF6ED;color:var(--ink);font-size:16px;margin-bottom:14px}
+  .form input:focus{outline:2px solid var(--goldlt);outline-offset:1px}
+  .btn{width:100%;background:var(--gold);color:#231a0e;font-weight:700;font-size:17px;padding:18px;border-radius:11px;border:none;cursor:pointer;transition:transform .15s,background .15s}
+  .btn:hover{background:var(--goldlt);transform:translateY(-2px)}
+  .fine{margin-top:14px;font-size:12.5px;color:#B4A488;text-align:center}
+  .note{margin-top:20px;background:rgba(169,121,60,.14);border:1px solid rgba(230,201,131,.34);border-radius:10px;padding:12px 14px;font-size:12.5px;color:#D9CFB4;max-width:440px}
+  @media(max-width:680px){.hero .scrim{background:linear-gradient(180deg,rgba(12,10,7,.6),rgba(12,10,7,.9))}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <img src="img/amy-face.jpg" alt="Amy Cole">
+  <div class="scrim"></div>
+  <div class="inner"><div class="col">
+    <div class="brand">The Phantom Method</div>
+    <div class="kick">Free guide</div>
+    <h1>5 prompts that stop your AI character <em>falling apart</em>.</h1>
+    <p class="sub">The fastest fix for drift. Copy, paste, and keep the same face every time. Free.</p>
+
+    <form class="form" id="optin" method="POST" action="REPLACE_WITH_YOUR_GHL_WEBHOOK">
+      <label for="email">Where should we send it?</label>
+      <input type="email" id="email" name="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn">Send me the 5 prompts &nbsp;&rarr;</button>
+      <p class="fine">No spam. The prompts, then a few emails on building a character that lasts.</p>
+    </form>
+    <div class="note"><b>Setup note (remove before launch):</b> point the form <code>action</code> at your GHL inbound webhook (tag: <code>phantom-lead</code>), then redirect to <code>free-thankyou.html</code>. Mirror your Bored Dog Club lead-capture flow.</div>
+  </div></div>
+</div>
+<script>
+  // Placeholder handler: until the GHL webhook is wired, send to the thankyou page.
+  document.getElementById('optin').addEventListener('submit', function(e){
+    if(this.action.indexOf('REPLACE_WITH')>-1){ e.preventDefault(); window.location='free-thankyou.html'; }
+  });
+</script>
+</body>
+</html>

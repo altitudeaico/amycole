@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Phantom Influencer — Build one AI persona so consistent people forget she isn't real</title>
+<meta name="description" content="The consistency system behind a believable AI creator. Build one AI persona so consistent people forget she was never real.">
+<style>
+  :root{
+    --sand:#EBE1CB; --ivory:#F7F0DF; --ink:#2A2015; --oak:#96591F;
+    --gold:#A9793C; --goldlt:#D2A45E; --espresso:#1A140D; --body:#4E4230;
+    --border:#DECBA8; --muted:#8A7B63;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--body);background:var(--sand);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif;font-weight:600;color:var(--ink)}
+  em{font-style:italic;color:var(--oak)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:680px;margin:0 auto}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;background:var(--espresso);overflow:hidden;display:flex;align-items:flex-end}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,7,.55) 0%,rgba(12,10,7,.10) 26%,rgba(12,10,7,.30) 54%,rgba(12,10,7,.85) 100%)}
+  .hero .htop{position:absolute;top:28px;left:0;right:0}
+  .hero .htop .wrap{display:flex;justify-content:space-between;align-items:center}
+  .hero .brand{letter-spacing:.4em;text-transform:uppercase;font-size:11px;font-weight:700;color:#EAD6AC}
+  .hero .brandr{letter-spacing:.24em;text-transform:uppercase;font-size:11px;color:#D8C4A0}
+  .hero .hcontent{position:relative;z-index:2;padding-bottom:64px;color:#F6F1E8}
+  .hero .kick{letter-spacing:.28em;text-transform:uppercase;font-size:12px;font-weight:700;color:#F0CE8A;margin-bottom:22px}
+  .hero h1{font-size:clamp(38px,7vw,68px);line-height:1.02;color:#FBF6ED;letter-spacing:-.5px;max-width:14ch}
+  .hero h1 em{color:#E7C07A}
+  .hero .sub{margin-top:22px;font-family:Georgia,serif;font-style:italic;font-size:clamp(16px,2.4vw,21px);color:#EBDFC8;max-width:34ch}
+  .hero .cta-row{margin-top:34px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+
+  .btn{display:inline-block;background:var(--gold);color:#231a0e;font-weight:700;font-size:16px;letter-spacing:.01em;padding:17px 30px;border-radius:11px;text-decoration:none;transition:transform .15s ease,background .15s ease;border:none;cursor:pointer}
+  .btn:hover{background:var(--goldlt);transform:translateY(-2px)}
+  .btn.big{font-size:18px;padding:20px 40px}
+  .price-note{color:#E9DFC8;font-size:14px}
+  .price-note s{color:#B4A488}
+
+  /* SECTIONS */
+  section{padding:78px 0}
+  .kick2{letter-spacing:.2em;text-transform:uppercase;font-size:12px;font-weight:700;color:var(--oak);margin-bottom:14px}
+  h2.big{font-size:clamp(28px,4.4vw,40px);line-height:1.1;letter-spacing:-.3px;margin-bottom:8px}
+  .brassrule{width:52px;height:3px;background:var(--gold);border-radius:2px;margin:16px 0 24px}
+  p.lead{font-size:19px;line-height:1.6;color:var(--body);margin:16px 0}
+  p.big{font-size:17px;margin:14px 0}
+  p.big b{color:var(--ink)}
+
+  .pull{font-family:Georgia,serif;font-style:italic;font-size:clamp(22px,3.4vw,30px);line-height:1.34;color:var(--ink);padding-left:22px;border-left:3px solid var(--goldlt);margin:8px 0}
+
+  .divide{border:none;border-top:1px solid var(--border);max-width:1040px;margin:0 auto}
+
+  /* problem band (dark) */
+  .darkband{background:var(--espresso);color:#E9DFC8}
+  .darkband .kick2{color:var(--goldlt)}
+  .darkband h2{color:#FBF6ED}
+  .darkband p.lead,.darkband p.big{color:#D9CFB4}
+  .darkband .pull{color:#F6F1E8;border-color:var(--goldlt)}
+  .darkband b{color:#F6F1E8}
+
+  /* inside grid */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+  .card{background:var(--ivory);border:1px solid var(--border);border-radius:14px;padding:26px 26px}
+  .card .n{font-family:Georgia,serif;font-size:15px;color:var(--gold);font-weight:700;margin-bottom:10px;letter-spacing:.1em}
+  .card h3{font-size:20px;margin-bottom:8px}
+  .card p{font-size:15px;color:var(--body)}
+  @media(max-width:680px){.cards{grid-template-columns:1fr}}
+
+  /* split image + text */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;background:var(--espresso)}
+  .split .simg{min-height:440px;background-size:cover;background-position:center}
+  .split .stext{padding:64px 48px;color:#EBDFC8;display:flex;flex-direction:column;justify-content:center}
+  .split .stext .kick2{color:var(--goldlt)}
+  .split .stext h2{color:#FBF6ED}
+  .split .stext p{color:#D9CFB4;font-size:17px}
+  .split .stext b{color:#F6F1E8}
+  @media(max-width:760px){.split{grid-template-columns:1fr}.split .simg{min-height:300px}}
+
+  /* offer box */
+  .offer{background:var(--ivory);border:1px solid var(--border);border-radius:20px;padding:44px 40px;text-align:center;box-shadow:0 20px 60px rgba(60,40,15,.10)}
+  .offer .tag{display:inline-block;background:#E6D9BE;color:var(--oak);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px}
+  .offer h2{font-size:32px;margin-bottom:6px}
+  .offer .pricing{margin:22px 0 8px;display:flex;gap:14px;align-items:baseline;justify-content:center}
+  .offer .now{font-family:Georgia,serif;font-size:52px;color:var(--ink);font-weight:700}
+  .offer .was{font-size:22px;color:var(--muted);text-decoration:line-through}
+  .offer ul{list-style:none;text-align:left;max-width:420px;margin:26px auto 30px}
+  .offer li{padding:9px 0 9px 30px;position:relative;font-size:16px;color:var(--body)}
+  .offer li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:7px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+  .offer .guarantee{margin-top:18px;font-size:14px;color:var(--muted)}
+
+  /* meta reveal */
+  .meta{text-align:center}
+  .meta .big-reveal{font-family:Georgia,serif;font-size:clamp(24px,4vw,34px);line-height:1.3;color:var(--ink);max-width:20ch;margin:0 auto}
+  .meta .big-reveal em{color:var(--oak)}
+
+  footer{background:var(--espresso);color:#B4A488;padding:44px 0;text-align:center;font-size:13px}
+  footer .fbrand{letter-spacing:.3em;text-transform:uppercase;color:#EAD6AC;font-weight:700;margin-bottom:10px}
+  footer a{color:var(--goldlt);text-decoration:none}
+
+  .center{text-align:center}
+  .mt{margin-top:30px}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="img/amy-cover.jpg" alt="Amy Cole">
+  <div class="scrim"></div>
+  <div class="htop"><div class="wrap"><span class="brand">The Phantom Method</span><span class="brandr">Amy Cole</span></div></div>
+  <div class="hcontent"><div class="wrap">
+    <div class="kick">The consistency system</div>
+    <h1>Build an influencer who <em>doesn't exist</em>.</h1>
+    <p class="sub">One AI persona, so consistent that people forget she was never real. The face never has to be yours.</p>
+    <div class="cta-row">
+      <a href="checkout.html" class="btn big">Get the method &nbsp;&rarr;</a>
+      <span class="price-note"><s>£39</s> &nbsp;£24 today &middot; instant download</span>
+    </div>
+  </div></div>
+</header>
+
+<!-- THE PROBLEM (dark) -->
+<section class="darkband">
+  <div class="wrap narrow">
+    <div class="kick2">The problem is drift</div>
+    <h2 class="big">Anyone can make one picture. Almost <em>nobody</em> can make the same face twice.</h2>
+    <div class="brassrule"></div>
+    <p class="lead">You've seen the accounts. A face you'd swear was a real person, posting every day, building a following, selling something. Then you find out she was made entirely with AI, and your first thought is: how.</p>
+    <p class="big">Most people can't do it. They make a great character on Monday, come back on Tuesday, and the AI hands them a stranger. The nose is a bit different. The jaw's changed. It's close, but close is no good, because your eye spots the change and stops believing her. That slow change is called drift, and it's why most AI influencers quit after about three posts.</p>
+    <p class="pull mt">One good picture is a trick. The same face, held steady across a hundred posts, is a business.</p>
+  </div>
+</section>
+
+<!-- THE PROMISE -->
+<section>
+  <div class="wrap narrow">
+    <div class="kick2">What this is</div>
+    <h2 class="big">The simple system for building one character that never drifts.</h2>
+    <div class="brassrule"></div>
+    <p class="lead">Not a pile of prompts for pretty pictures. A clear, repeatable method for building one persona and locking her so tightly that people stop asking whether she's real and just start following her.</p>
+    <p class="big">It's the exact system behind Amy, the woman on this page. She isn't real. She's held perfectly across dozens of scenes, moods, and outfits. This guide is how that's done, written plainly enough that you can build your first one this week.</p>
+  </div>
+</section>
+
+<hr class="divide">
+
+<!-- WHAT'S INSIDE -->
+<section>
+  <div class="wrap">
+    <div class="narrow center">
+      <div class="kick2" style="text-align:center">What's inside</div>
+      <h2 class="big">The four locks, and the loop that runs them.</h2>
+      <div class="brassrule" style="margin-left:auto;margin-right:auto"></div>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="n">LOCK ONE</div><h3>The Face</h3><p>How to write her once, pick your person out of a batch, and lock her so every future image is built from her, not from the words again.</p></div>
+      <div class="card"><div class="n">LOCK TWO</div><h3>The Body</h3><p>The second reference that lets you pose her anywhere, and the matching trick that stops your character quietly splitting into two people.</p></div>
+      <div class="card"><div class="n">LOCK THREE</div><h3>The Set</h3><p>The one place she lives. The lock almost everyone skips, and the one that quietly does half your consistency work for free.</p></div>
+      <div class="card"><div class="n">LOCK FOUR</div><h3>The Voice</h3><p>If she talks, she has to sound the same every time. How to lock a voice, and the gap that makes people unable to look away.</p></div>
+      <div class="card"><div class="n">THE LOOP</div><h3>The Production Recipe</h3><p>Once she's locked, posting stops being creative work and becomes assembly. The three-part recipe you run for every single post.</p></div>
+      <div class="card"><div class="n">THE CHECKLIST</div><h3>The Drift-Killers</h3><p>Every way a character falls apart, and the one-line fix for each. Run it whenever yours starts to slip.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: proof -->
+<div class="split">
+  <div class="simg" style="background-image:url('img/amy-voice.jpg')"></div>
+  <div class="stext">
+    <div class="kick2">The proof is on the page</div>
+    <h2 class="big" style="font-size:30px">Every photo of Amy is the method working.</h2>
+    <p>She's held perfectly across a close-up, a full-length shot, a wide room, and a podcast mic. Same face, same world, every time. <b>If she can be this consistent, so can yours.</b> That's not a claim in this guide. It's the guide's own cover proving itself.</p>
+  </div>
+</div>
+
+<!-- META REVEAL -->
+<section class="meta">
+  <div class="wrap narrow">
+    <div class="kick2" style="text-align:center">The part that makes it work</div>
+    <p class="big-reveal">You're taking this seriously because she looks real. <em>She isn't.</em> That gap, between what people believe and what's true, is the whole business.</p>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="offer">
+  <div class="wrap narrow">
+    <div class="offer">
+      <span class="tag">Instant download &middot; PDF</span>
+      <h2>The Phantom Influencer</h2>
+      <p style="color:var(--muted);font-size:16px">The complete consistency method</p>
+      <div class="pricing"><span class="now">£24</span><span class="was">£39</span></div>
+      <ul>
+        <li>The four locks: face, body, set, voice</li>
+        <li>Copy-paste prompt examples for each</li>
+        <li>The production loop for posting at speed</li>
+        <li>The drift-killer checklist</li>
+        <li>Written plain, build your first one this week</li>
+      </ul>
+      <a href="checkout.html" class="btn big">Get instant access &nbsp;&rarr;</a>
+      <p class="guarantee">Delivered as a PDF the moment you buy.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">The Phantom Method</div>
+    <p>Amy Cole is 100% AI. Same character, every post, zero drift.</p>
+    <p class="mt" style="margin-top:14px">&copy; Altitude AI &middot; <a href="index.html">The Phantom Influencer</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

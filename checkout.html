@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — The Phantom Influencer</title>
+<style>
+  :root{--sand:#EBE1CB;--ivory:#F7F0DF;--ink:#2A2015;--oak:#96591F;--gold:#A9793C;--goldlt:#D2A45E;--espresso:#1A140D;--body:#4E4230;--border:#DECBA8;--muted:#8A7B63}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--body);background:var(--sand);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+  h1,h2,h3,.serif{font-family:Georgia,serif;font-weight:600;color:var(--ink)}
+  em{font-style:italic;color:var(--oak)}
+  .top{background:var(--espresso);padding:22px 0;text-align:center}
+  .top .brand{letter-spacing:.4em;text-transform:uppercase;font-size:11px;font-weight:700;color:#EAD6AC}
+  .wrap{max-width:560px;margin:0 auto;padding:56px 24px;flex:1}
+  .kick{letter-spacing:.2em;text-transform:uppercase;font-size:12px;font-weight:700;color:var(--oak);margin-bottom:12px;text-align:center}
+  h1{font-size:32px;text-align:center;margin-bottom:8px;line-height:1.12}
+  .sub{text-align:center;color:var(--muted);margin-bottom:34px}
+  .summary{background:var(--ivory);border:1px solid var(--border);border-radius:16px;padding:28px 28px;margin-bottom:26px}
+  .line{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+  .line.total{border-top:1px solid var(--border);margin-top:8px;padding-top:16px;font-family:Georgia,serif;font-size:22px;color:var(--ink);font-weight:700}
+  .line .was{color:var(--muted);text-decoration:line-through;font-size:15px;margin-left:8px}
+  .item{font-size:16px;color:var(--ink);font-weight:600}
+  .item small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+  .btn{display:block;width:100%;text-align:center;background:var(--gold);color:#231a0e;font-weight:700;font-size:18px;padding:20px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;transition:transform .15s,background .15s}
+  .btn:hover{background:var(--goldlt);transform:translateY(-2px)}
+  .trust{text-align:center;margin-top:18px;color:var(--muted);font-size:13px}
+  .back{display:block;text-align:center;margin-top:22px;color:var(--oak);text-decoration:none;font-size:14px}
+  .note{background:#F3E9D2;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;font-size:13.5px;color:var(--body);margin-bottom:26px}
+  footer{background:var(--espresso);color:#B4A488;text-align:center;padding:24px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="top"><span class="brand">The Phantom Method</span></div>
+<div class="wrap">
+  <div class="kick">Checkout</div>
+  <h1>You're one step from <em>the method</em>.</h1>
+  <p class="sub">Instant PDF download the moment you buy.</p>
+
+  <div class="note"><b>Setup note (remove before launch):</b> the button below points to a placeholder. Replace the <code>href</code> with your live Stripe Payment Link for The Phantom Influencer (£24). In Stripe, set the payment link's confirmation page to redirect to <code>thankyou.html</code>.</div>
+
+  <div class="summary">
+    <div class="line"><span class="item">The Phantom Influencer<small>The complete consistency method (PDF)</small></span><span><b>£24</b> <span class="was">£39</span></span></div>
+    <div class="line total"><span>Total</span><span>£24</span></div>
+  </div>
+
+  <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" class="btn">Pay £24 &amp; download &nbsp;&rarr;</a>
+  <p class="trust">Secure payment via Stripe &middot; instant delivery</p>
+  <a href="index.html" class="back">&larr; Back</a>
+</div>
+<footer>Amy Cole is 100% AI &middot; The Phantom Method</footer>
+</body>
+</html>
