@@ -6,6 +6,37 @@
 
 ---
 
+## 0. LOCKED DECISION (12 July 2026) — read this first
+
+Two clocks, one asset.
+
+**IMMEDIATE (cash): run the uncgotgame model.** One distinctive, brand-safe persona (Amy) + ONE core product, sold to reach. NOT the AiMUSE convoluted multi-rung ladder. One offer, like unc's single ~$75 guide against a big audience.
+
+**LONG TERM (the re-ratable asset): the persona studio (Blur Studios shape).** A factory that manufactures distinctive AI personas and monetises via brand partnerships. This is the Altitude-shaped endgame. Parked until the immediate play proves the motion.
+
+**The two are the same muscle, not two bets.** The immediate product literally teaches the thing the studio will one day sell as a service. Proving one persona (Amy) = the template for the factory. Cash-now IS the studio's proof-of-motion.
+
+### The ONE core product (reimagined — replaces the Phantom PDF setup)
+
+Kill "The Phantom Influencer — how to keep your AI character consistent." Wrong on every axis: consistency is a commodity (taught free by every tool), £24 signals cheap, it's a component not a system, and "become an AI influencer" is saturated creator-cringe.
+
+Replace with **one premium product: the complete playbook for building a distinctive AI persona that works like a brand asset** — pick a persona that isn't a clone (the anti-blonde-clone thesis is the real edge), lock it, give it a POV with teeth, run the content engine, turn it into something that earns. Amy is the living proof of every step (same fusion that makes unc work: persona = demo = ad = proof).
+
+**Reposition away from "get famous as an AI influencer" → toward "build an AI persona that works while you sleep."** Operator framing, aimed at founders / operators / small businesses, not fame-chasers. This (a) fits Amy's operator persona, (b) dodges the saturated creator lane, (c) is a self-serve version of what the studio will later sell as a service — so it's the on-ramp to the endgame, not a detour.
+
+**The whole offer, unc-simple:**
+- Free lead magnet: The Drift Problem (5 prompts) — already built, keep.
+- THE ONE core product: the complete persona playbook/system — **~$97** (priced like a real system, not a £24 PDF). Single offer.
+- Nothing else. No £197 ladder. No upsell nurture maze. The old Phantom PDF content becomes one module of this.
+
+### The one question that gates everything
+**Does Amy travel (views/saves)?** Unc's model only works because the persona pulls reach; the product is just the tollbooth. Reach is the sole unproven variable. Everything built (funnel, PDF, emails, pages) is downstream of it. This week's job: post the sharpened Amy, watch the counter. Do not build more product before reach is tested.
+
+### Honest tension (named, accepted)
+Unc's fuel is provocation (divisive gender/money takes → comment wars → reach). Amy is brand-safe by design (for the studio/B2B endgame). Brand-safe travels a little slower than manosphere-bait — a real trade. Accepted deliberately, because the studio needs a brand-safe asset, and Amy's *intelligent* provocation (sharp about beliefs, never crude about people) still travels, just cleaner. We are running a slightly-more-brand-safe uncgotgame. That is what makes cash-now and the endgame the same asset.
+
+---
+
 ## 1. The one-paragraph situation
 
 The AI-influencer market is a **3-tier pyramid**. At the top (Tier 1) are studios like **Blur Studios** that manufacture distinctive personas and make real, defensible money from **brand partnerships** (Kurt Geiger, Meta) — 7 years, 20M+ followers, 5B+ views. In the middle (Tier 2) are **product owners** like **zuri_ladiva** who build a course/method that front-accounts resell. At the bottom (Tier 3) is a crowded field of **solo creators selling "the method"** to other AI creators (sacredlysavage, mariaxelise, uncgotgame, tamala) — the most saturated, lowest-moat game in the market. **Amy's Phantom PDF is a Tier-3 method-seller.** We built the machine correctly; we just aimed it at the bottom of the market.
