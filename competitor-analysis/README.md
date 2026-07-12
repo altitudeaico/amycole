@@ -39,6 +39,7 @@ competitor-analysis/
 | Competitor | Followers | Model | Price ladder | Headline finding |
 |---|---|---|---|---|
 | [@sacredlysavage](./sacredlysavage/analysis.md) | 45.1K | Meta (sells the method) | Free → $147 | Live proof of Amy's exact model, 10+ product ladder. IS the crowded lane → validates Amy's counter-position. |
+| [@mariaxelise](./mariaxelise/analysis.md) | 36.5K | Meta (sells the method) + brand collabs | Free → $197 | Sells the SAME "AiMUSE/AICITY" product family as sacredlysavage → reveals a shared reseller/affiliate ecosystem. Higher ceiling ($197). Uses testimonials + FAQ. Credits "@zuriladiva" as creator (white-label lead). |
 
 *(more to be added)*
 
@@ -46,12 +47,14 @@ competitor-analysis/
 
 ## Cross-competitor patterns (updated as we add more)
 
-*Emerging from n=1 so far — treat as hypotheses until confirmed by more accounts:*
+*n=2 so far. Patterns confirmed across both accounts are marked [CONFIRMED n=2]; single-account observations stay as hypotheses.*
 
-1. **The money is in the ladder, not the single product.** The mature player runs 10+ products (free → ~$150), not one PDF. Our £24 Phantom is one rung of a ladder we haven't built yet.
-2. **Objection-handling belongs on the sales page.** Winners answer "do I need to be technical / do I need other tools / will this work for me" directly on the page.
-3. **The durable upsell is "now monetise your character as a real brand,"** not "here's how to keep a face consistent." The consistency method is commoditised; the multi-stream branded business is what people pay a premium for.
-4. **The crowded lane is blonde/thirst/hype-luxury.** Every wedge for Amy comes from being the opposite: operator-brain, dry, posh, restrained, boardroom-luxury.
+1. **[CONFIRMED n=2] The money is in the ladder, not the single product.** Both run 10+ products (free → $147–$197), not one PDF. Our £24 Phantom is one rung of a ladder we haven't built.
+2. **[CONFIRMED n=2] Objection-handling / FAQ belongs on the sales page.** Both bake in "do I need to be technical / do I need other tools / is this just a course to sell courses / can I use it for my own brand." Amy's page still doesn't. **Highest-priority page fix.**
+3. **[CONFIRMED n=2] The durable, highest-priced product is "now monetise your character as a real multi-stream brand,"** NOT "keep a face consistent." sacredlysavage's PME ($57) and mariaxelise's AICITY ($197) make the identical argument ("the real money is in what you build around it"). The consistency method is commoditised; the branded business is the premium sell. **This is Amy's validated path-B product.**
+4. **[CONFIRMED n=2] The crowded lane is blonde / clean-girl / luxury.** Both are near-identical blonde personas. Amy's wedge (dark, dry, posh, operator, boardroom-luxury) grows *stronger* as the lane fills with interchangeable clones.
+5. **[NEW — big] There is a shared "AiMUSE / AICITY" product ecosystem.** Both sell the same AiMUSE Alchemy ($147) and AiMUSE Seedance ($67). Both promote 60–80% affiliate commissions. mariaxelise's AICITY page credits "@zuriladiva" as creator. Strong evidence these front-facing personas are a **reseller/affiliate network pushing a shared product suite**, not independent product builders. Implications: (a) market is more concentrated than it looks; (b) an **affiliate program is a core growth lever Amy lacks**; (c) differentiation matters more, since the personas are becoming interchangeable. **Next action: analyse @zuriladiva (likely the product owner behind the front-accounts).**
+6. **[hypothesis] Fast growth on low post-count via a "trial reels" strategy.** mariaxelise: 36.5K on 59 posts, and sells "Trial Reels Done Right" ($37). May be the shared growth hack. Confirm against future accounts.
 
 ---
 
